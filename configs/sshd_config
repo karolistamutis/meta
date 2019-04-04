@@ -1,0 +1,16 @@
+Port 22
+Protocol 2
+ServerKeyBits 4096
+SyslogFacility AUTH
+LogLevel INFO
+LoginGraceTime 60
+PermitRootLogin no
+RSAAuthentication no
+PubkeyAuthentication yes
+PasswordAuthentication no
+PermitEmptyPasswords no
+Compression yes
+KeepAlive yes
+ClientAliveInterval 30
+ClientAliveCountMax 4
+AllowUsers vagrant
