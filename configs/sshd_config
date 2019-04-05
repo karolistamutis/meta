@@ -13,4 +13,4 @@ Compression yes
 KeepAlive yes
 ClientAliveInterval 30
 ClientAliveCountMax 4
-AllowUsers vagrant
+AllowUsers ALLOW_USERS
