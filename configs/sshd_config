@@ -11,4 +11,5 @@ Compression yes
 KeepAlive yes
 ClientAliveInterval 30
 ClientAliveCountMax 4
+Subsystem sftp /usr/lib/openssh/sftp-server
 AllowUsers ALLOW_USERS

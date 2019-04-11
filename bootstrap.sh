@@ -82,7 +82,7 @@ fi
 
 # add to sudoers
 if ! ssh_file_exists "/etc/sudoers.d/90-$ANSIBLE_USER-users"; then
-  cmd="cat >/etc/sudoers.d/90-$ANSIBLE_USER-users <<< '%$ANSIBLE_GROUP   ALL=(ALL:ALL) ALL'; chmod 440 /etc/sudoers.d/90-$ANSIBLE_USER-users"
+  cmd="cat >/etc/sudoers.d/90-$ANSIBLE_USER-users <<< '%$ANSIBLE_GROUP ALL=(ALL) NOPASSWD:ALL'; chmod 440 /etc/sudoers.d/90-$ANSIBLE_USER-users"
   out=$(ssh_exec $cmd)
   echo "added /etc/sudoers.d/90-$ANSIBLE_USER-users"
 else
