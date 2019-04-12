@@ -71,7 +71,7 @@ cmd="grep -c $ANSIBLE_USER /etc/passwd|tr -d '\n'"
 out=$(ssh_exec $cmd) || :
 
 if [ "$out" == "0" ]; then
-  out=$(ssh_exec "useradd -m -g $ANSIBLE_GROUP $ANSIBLE_USER")
+  out=$(ssh_exec "useradd -s /bin/bash -m -g $ANSIBLE_GROUP $ANSIBLE_USER")
   echo "user $ANSIBLE_USER added"
 
   # set password and unlock account
